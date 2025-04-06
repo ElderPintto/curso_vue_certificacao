@@ -1,0 +1,15 @@
+{
+  "name": "curso_vue_certificacao",
+  "version": "1.0.0",
+  "description": "Este curso foi desenvolvido para ajudar desenvolvedores a se prepararem para a certificação mid-level de Vue.js. O conteúdo abrange todos os tópicos necessários para obter sucesso na certificação, com explicações detalhadas, exemplos práticos e exercícios para fixação.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "marked": "^15.0.7"
+  }
+}

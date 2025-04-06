@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; 
+             script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net; 
+             script-src-elem 'self' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net;
+             style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; 
+             style-src-elem 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com; 
+             img-src 'self' data:; 
+             connect-src 'self';"
+    />
+
+    <!-- SEO Principais Tags -->
+    <title>
+      Curso de preparação Certificação Vue.js - Aprenda Desenvolvimento Web
+      Moderno
+    </title>
+    <meta
+      name="description"
+      content="Curso de preparação para a certificação Vue.js. Aprenda do básico ao avançado, com exercícios práticos e conteúdo atualizado."
+    />
+    <meta
+      name="keywords"
+      content="Vue.js, certificação, desenvolvimento web, frontend, javascript, programação"
+    />
+
+    <!-- Prism CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css"
+    />
+  </head>
+  <body>
+    <button id="theme-toggle">🌓 Alternar Tema</button>
+
+    <div id="app">
+      <header>
+        <h1>Curso de preparação para a certificação Vue.js</h1>
+        <div class="modules-section">
+          <h3>Módulos do Curso</h3>
+          <ul id="module-list" data-type="modulos"></ul>
+        </div>
+        <div class="complementary-section">
+          <h3>Conteúdos Complementares</h3>
+          <ul id="complementary-list" data-type="complementares"></ul>
+        </div>
+      </header>
+
+      <main id="content-area">
+        <!-- Lesson content will be dynamically loaded here -->
+      </main>
+
+      <footer>
+        <p>© 2025 Curso de Certificação Vue.js</p>
+      </footer>
+    </div>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/assets/favicon.png" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Accessibility -->
+    <meta name="theme-color" content="#42b883" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <script type="module" src="scripts/app.js"></script>
+
+    <!-- Marked JS -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  </body>
+</html>

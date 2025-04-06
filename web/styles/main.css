@@ -1,0 +1,236 @@
+:root {
+  --vue-green: #42b883;
+  --vue-light-green: #35495e;
+  --background-light: #f4f4f4;
+  --text-color: #2c3e50;
+  --card-background: white;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Dark Mode Colors */
+  --dark-background: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-text: #e0e0e0;
+  --dark-primary: #bb86fc;
+  --dark-secondary: #03dac6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  background-color: var(--vue-green);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.modules-section,
+.complementary-section {
+  margin-bottom: 1.5rem;
+}
+
+.modules-section h3,
+.complementary-section h3 {
+  color: var(--vue-light-green);
+  border-bottom: 2px solid var(--vue-light-green);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#module-list,
+#complementary-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.module-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.module-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+#content-area {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 15px 30px var(--shadow-color);
+  min-height: 500px;
+}
+
+/* Estilos para conteúdo Markdown */
+#content-area h1 {
+  color: var(--vue-green);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--vue-green);
+  padding-bottom: 0.5rem;
+}
+
+#content-area h2 {
+  color: var(--vue-light-green);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#content-area p {
+  margin-bottom: 1rem;
+}
+
+#content-area ul,
+#content-area ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--vue-light-green);
+  color: white;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #app {
+    padding: 1rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .module-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Animações sutis */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tema Dark */
+
+body.dark-mode {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
+
+/* Tema Dark para elementos específicos */
+body.dark-mode #app {
+  background-color: var(--dark-background);
+}
+
+body.dark-mode header {
+  background-color: var(--dark-surface);
+  color: var(--dark-primary);
+}
+
+body.dark-mode nav {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #content-area {
+  background-color: var(--dark-surface);
+  color: var(--dark-text);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode #content-area h1 {
+  color: var(--dark-primary);
+  border-bottom-color: var(--dark-primary);
+}
+
+body.dark-mode #content-area h2 {
+  color: var(--dark-secondary);
+}
+
+body.dark-mode .module-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-primary);
+}
+
+body.dark-mode .module-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode footer {
+  background-color: var(--dark-surface);
+  color: var(--dark-text);
+}
+
+/* Botão de alternância de tema */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--vue-green);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--vue-light-green);
+}
+
+body.dark-mode #theme-toggle {
+  background-color: var(--dark-primary);
+  color: var(--dark-background);
+}
