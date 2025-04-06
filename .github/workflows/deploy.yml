@@ -22,8 +22,6 @@ jobs:
         run: |
           mkdir -p docs
           cp -r web/* docs/
-          mkdir -p docs/markdown
-          cp markdown/*.md docs/markdown/
           touch docs/.nojekyll
 
       - name: Upload artifact
